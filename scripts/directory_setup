@@ -3,6 +3,6 @@
 # currently in scripts
 
 # create directories
-mkdir ../notebooks1
-mkdir ../notebooks1/sandbox1
+mkdir ../notebooks
+mkdir ../notebooks/sandbox
 pwd # should print path/to/gatk-4.6.2.0/GATK_Mutect2_Tutorial/scripts
