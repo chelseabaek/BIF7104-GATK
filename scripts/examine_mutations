@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Examine the annotations for the TP53 mutation that we viewed earlier in IGV, at chr17:7674220."
+zgrep chr17 ../notebooks/sandbox/12_somatic_oncefiltered_funcotate.vcf.gz | grep 7674220
+printf "\n"
+
+echo "Total mutation records"
+zgrep -v "^#" ../notebooks/sandbox/12_somatic_oncefiltered_funcotate.vcf.gz | wc
+printf "\n"
+
+echo "Number of MISSENSE records"
+zgrep -v "^#" ../notebooks/sandbox/12_somatic_oncefiltered_funcotate.vcf.gz | grep "|MISSENSE|" | wc
+printf "\n"
+
+echo "Number of MISSENSE records that PASS filters"
+zgrep -v "^#" ../notebooks/sandbox/12_somatic_oncefiltered_funcotate.vcf.gz | grep "|MISSENSE|" | grep PASS | wc

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+../../gatk Mutect2 \
+-R ../notebooks/ref/Homo_sapiens_assembly38.fasta \
+-I ../notebooks/bams/tumor.bam \
+-I ../notebooks/bams/normal.bam \
+-normal HCC1143_normal \
+-pon ../notebooks/resources/chr17_m2pon.vcf.gz \
+--germline-resource ../notebooks/resources/chr17_af-only-gnomad_grch38.vcf.gz \
+-L ../notebooks/resources/chr17plus.interval_list \
+-O ../notebooks/sandbox/1_somatic_m2.vcf.gz \
+-bamout ../notebooks/sandbox/2_tumor_normal_m2.bam

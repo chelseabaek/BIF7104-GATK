@@ -1,0 +1,11 @@
+#!/bin/bash
+
+../../gatk Funcotator \
+--data-sources-path ../notebooks/resources/funcotator_dataSources_GATK_Workshop_20181205/ \
+--ref-version hg38 \
+-R ../notebooks/ref/Homo_sapiens_assembly38.fasta \
+-V ../notebooks/mutect2_precomputed/9_somatic_oncefiltered.vcf.gz \
+-O ../notebooks/sandbox/12_somatic_oncefiltered_funcotate.vcf.gz \
+--output-file-format VCF
+
+zgrep chr17 ../notebooks/sandbox/12_somatic_oncefiltered_funcotate.vcf.gz | grep 7674220

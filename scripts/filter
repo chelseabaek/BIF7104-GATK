@@ -1,0 +1,12 @@
+#!/bin/bash
+
+../../gatk FilterMutectCalls \
+-R ../notebooks/ref/Homo_sapiens_assembly38.fasta \
+-V ../notebooks/sandbox/1_somatic_m2.vcf.gz \
+--contamination-table ../notebooks/sandbox/8_pair_calculatecontamination.table \
+--stats ../notebooks/sandbox/1_somatic_m2.vcf.gz.stats \
+--tumor-segmentation ../notebooks/sandbox/segments.table \
+-O ../notebooks/sandbox/9_somatic_oncefiltered.vcf.gz
+
+echo "Filters"
+zgrep '##FILTER' ../notebooks/sandbox/9_somatic_oncefiltered.vcf.gz

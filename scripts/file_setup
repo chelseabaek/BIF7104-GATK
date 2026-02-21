@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# download files from https://console.cloud.google.com/storage/browser/gatk-tutorials/workshop_2002/3-somatic?project=broad-dsde-outreach&organizationId=548622027621
+gsutil ls gs://gatk-tutorials/workshop_2002/3-somatic/
+
+gsutil -m cp -r gs://gatk-tutorials/workshop_2002/3-somatic/bams ../notebooks/
+gsutil -m cp -r gs://gatk-tutorials/workshop_2002/3-somatic/ref ../notebooks/
+gsutil -m cp -r gs://gatk-tutorials/workshop_2002/3-somatic/resources ../notebooks/
+gsutil -m cp -r gs://gatk-tutorials/workshop_2002/3-somatic/mutect2_precomputed ../notebooks/

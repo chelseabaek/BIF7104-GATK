@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Run GetPileupSummaries to summarize read support for a set number of known variant sites.
+
+# Run on Tumor samples
+../../gatk GetPileupSummaries \
+-I ../notebooks/bams/tumor.bam \
+-V ../notebooks/resources/chr17_small_exac_common_3_grch38.vcf.gz \
+-L ../notebooks/resources/chr17_small_exac_common_3_grch38.vcf.gz \
+-O ../notebooks/sandbox/7_tumor_getpileupsummaries.table
+
+# Run on Normal samples
+../../gatk GetPileupSummaries \
+-I ../notebooks/bams/normal.bam \
+-V ../notebooks/resources/chr17_small_exac_common_3_grch38.vcf.gz \
+-L ../notebooks/resources/chr17_small_exac_common_3_grch38.vcf.gz \
+-O ../notebooks/sandbox/7_normal_getpileupsummaries.table
+
+head ../notebooks/sandbox/7_tumor_getpileupsummaries.table
+head ../notebooks/sandbox/7_normal_getpileupsummaries.table

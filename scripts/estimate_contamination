@@ -1,0 +1,16 @@
+#!/bin/bash
+
+../../gatk CalculateContamination \
+-I ../notebooks/sandbox/7_tumor_getpileupsummaries.table \
+-tumor-segmentation ../notebooks/sandbox/segments.table \
+-O ../notebooks/sandbox/8_tumor_calculatecontamination.table
+
+../../gatk CalculateContamination \
+-I ../notebooks/sandbox/7_tumor_getpileupsummaries.table \
+-matched ../notebooks/sandbox/7_normal_getpileupsummaries.table \
+-tumor-segmentation ../notebooks/sandbox/segments.table \
+-O ../notebooks/sandbox/8_pair_calculatecontamination.table
+
+# results
+cat ../notebooks/sandbox/8_tumor_calculatecontamination.table
+cat ../notebooks/sandbox/8_pair_calculatecontamination.table
