@@ -1,5 +1,12 @@
 # BIF7104-GATK
 Tutorial (skipping PoN for now): https://gatk.broadinstitute.org/hc/en-us/articles/360047232772--Notebook-Intro-to-using-Mutect2-for-somatic-data
+
+my setup: 
+
+      └── gatk-4.6.2.0/
+         └── GATK_Mutect2_Tutorial/
+            └── scripts
+
 1. cd ../gatk-4.6.2.0/GATK_Mutect2_Tutorial/scripts
 2. bash directory_setup
 3. bash file_setup
