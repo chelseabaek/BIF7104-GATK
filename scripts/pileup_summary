@@ -16,5 +16,10 @@
 -L ../notebooks/resources/chr17_small_exac_common_3_grch38.vcf.gz \
 -O ../notebooks/sandbox/7_normal_getpileupsummaries.table
 
-head ../notebooks/sandbox/7_tumor_getpileupsummaries.table
-head ../notebooks/sandbox/7_normal_getpileupsummaries.table
+head -2 ../notebooks/sandbox/7_tumor_getpileupsummaries.table 
+
+echo "7_tumor_getpileupsummaries.table"
+grep "^chr17" ../notebooks/sandbox/7_tumor_getpileupsummaries.table | awk '$5 >= 3'
+
+echo "7_normal_getpileupsummaries.table"
+grep "^chr17" ../notebooks/sandbox/7_normal_getpileupsummaries.table | awk '$5 >= 3'
