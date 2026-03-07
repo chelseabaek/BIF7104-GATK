@@ -1,7 +1,7 @@
-# BIF7104-GATK
+# GATK Tutoiral: Intro to using Mutect2 for somatic data
 https://gatk.broadinstitute.org/hc/en-us/articles/360047232772--Notebook-Intro-to-using-Mutect2-for-somatic-data
 
-my setup: 
+Setup: 
 
       └── gatk-4.6.2.0/
          └── GATK_Mutect2_Tutorial/
